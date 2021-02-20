@@ -28,7 +28,7 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 <img src="Flixster_Walkthrough_Lanscape.gif" width=250><br>
 
 ### Notes
-Describe any challenges encountered while building the app.
+Reading through the Movie Database API Documentation was key in order to understand how the JSON data is structured. It is also interesting and important to understand how the RecyclerView creates the ViewHolders and then binds the data to the ViewHolders. 
 
 ### Open-source libraries used
 
