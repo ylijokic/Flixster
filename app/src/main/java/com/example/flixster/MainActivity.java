@@ -49,8 +49,10 @@ public class MainActivity extends AppCompatActivity {
         // Set a Layout Manager onto Recycler View
         rvMovies.setLayoutManager(new LinearLayoutManager(this));
 
+        // Create AsyncHttpClient instance to make a GET Request to API
         AsyncHttpClient client = new AsyncHttpClient();
 
+        // Ansync GET Request with callback function as second parameter
         client.get(NOW_PLAYING, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int i, Headers headers, JSON json) {

@@ -21,6 +21,7 @@ public class Movie {
     // empty constructor needed by the Parceler library
     public Movie() {};
 
+    // Constructor that takes in a JSON Object
     public Movie(JSONObject jsonObject) throws JSONException {
         backdropPath = jsonObject.getString("backdrop_path");
         posterPath = jsonObject.getString("poster_path");
@@ -30,6 +31,7 @@ public class Movie {
         movieId = jsonObject.getInt("id");
     }
 
+    // Iterate through JSON Array and create List of Movie Objects using Constructor
     public static List<Movie> fromJsonArray(JSONArray movieJsonArray) throws JSONException {
         List<Movie> movies = new ArrayList<>();
 
@@ -40,6 +42,7 @@ public class Movie {
         return movies;
     }
 
+    // Public getter methods for private attributes
     public String getPosterPath() {
         return String.format("https://image.tmdb.org/t/p/w342/%s",posterPath);
     }
